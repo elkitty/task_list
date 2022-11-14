@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Task} from '../../Task';
-import {TASKS} from '../../mock-tasks';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { TaskService } from '../../service/task.service';
+import { Task } from 'src/app/Task';
 
 @Component({
   selector: 'app-tasks',
@@ -9,12 +9,17 @@ import { faTimes } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks: Task[] = TASKS;
+  tasks: Task[] = [];
   faTimes = faTimes;
 
-  constructor() { }
+  constructor(
+    private taskService: TaskService
+  ) { }
 
   ngOnInit(): void {
+    this.taskService.getTasks().subscribe((tasks: Task[])=>(
+      this.tasks = tasks
+    ));
   }
 
 }
