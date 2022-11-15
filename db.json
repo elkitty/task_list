@@ -1,35 +1,16 @@
 {
   "tasks": [
-
     {
-      "id": 1,
-      "text": "Terminar tarea 1",
-      "day": "11 de enero",
-      "reminder": true
-
+      "text": "Energía y Resistencia",
+      "day": "manana",
+      "reminder": true,
+      "id": 1
     },
     {
-      "id": 2,
-      "text": "Terminar tarea 2",
-      "day": "12 de enero",
-      "reminder": true
-
-    },
-    {
-      "id": 3,
-      "text": "Terminar tarea 3",
-      "day": "13 de enero",
-      "reminder": true
-
-    },
-    {
-      "id": 4,
-      "text": "Terminar tarea 4",
-      "day": "14 de enero",
-      "reminder": false
-
+      "text": "¿Dónde encontrás Tan&Go?",
+      "day": "pasado",
+      "reminder": true,
+      "id": 2
     }
-
-
   ]
 }
